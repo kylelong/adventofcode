@@ -10,14 +10,6 @@ public class day4 {
 
         int valid = 0;
         List<String> data = new ArrayList<>();
-        List<String> colors = new ArrayList<>();
-        colors.add("amb");
-        colors.add("blu");
-        colors.add("brn");
-        colors.add("gry");
-        colors.add("grn");
-        colors.add("hzl");
-        colors.add("oth");
         while (scan.hasNextLine()) {
             String s = scan.nextLine();
             if (s.isEmpty()) {
@@ -59,7 +51,7 @@ public class day4 {
                                 good = false;
                         }
                         if (field.equals("ecl")) {
-                            if (!colors.contains(value))
+                            if (!(value.matches("(amb|blu|brn|gry|grn|hzl|oth)")))
                                 good = false;
                         }
                         if (field.equals("pid")) {

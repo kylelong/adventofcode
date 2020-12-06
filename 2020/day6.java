@@ -33,7 +33,7 @@ public class day6 {
         Set<Character> set = new HashSet<>();
         boolean start = true;
         for (String s : list) {
-            if (start == true) {
+            if (start) {
                 start = false;
                 for (char c : s.toCharArray()) {
                     set.add(c);
@@ -54,8 +54,6 @@ public class day6 {
             }
 
         }
-        if (set.size() > 0)
-            ans += set.size();
-        System.out.println(ans);
+        System.out.println(ans + set.size());
     }
 }
